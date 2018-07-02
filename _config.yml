@@ -15,11 +15,11 @@ sass:
   style: compressed # expanded
 
 # SEO settings
-title: end2end
-description: "A free Jekyll theme for download"
+title: Denny's Portfolio
+description: "The portfolio website of Denny"
 keywords: "Jekyll, theme, free, download, SEO, blog, web"
 url: http://nandomoreira.me
-baseurl: "/end2end"
+baseurl: "itsdennian.github.io"
 
 google_analytics: UA-52446115-1
 repo: http://github.com/nandomoreirame/end2end
