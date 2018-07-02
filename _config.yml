@@ -39,6 +39,7 @@ author:
   facebook: https://facebook.com/umdevux
   linkedin: https://linkedin.com/in/nandomoreirame
 
+remote_theme: Fernando Moreira/end2end
 # navbar pages
 navbar:
   - slug: about
