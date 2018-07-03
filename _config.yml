@@ -5,8 +5,8 @@ description:        "Creative individual with many pasions, but learning, proble
 reading_time:       false
 words_per_minute:   200
 logo:               'assets/img/logo.png'
-background:         'assets/img/bg.jpg'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+background:         'assets/img/bg.png'
+tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://itsdennian.github.io/
 
@@ -38,13 +38,13 @@ disqus_shortname:   dennysam
   #ad-slot:
 #bing-verify:
 #email:
+github-url:         itsdennian
 twitter:            itsdennian
 facebook:           itsdennian
-github-url:         itsdennian
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-instagram:          dennysam_
+# instagram:          dennysam_
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
