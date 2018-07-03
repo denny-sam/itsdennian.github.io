@@ -1,45 +1,30 @@
 ---
 layout: post
-title: "Testing Readability with a Bunch of Text"
-date: 2012-05-22
-excerpt: "A ton of text to test readability."
-tags: [sample post, readability, test]
+title: "How I hacked the website of Clean and Clear Fresh Face 2015!"
+date: 2015-09-06
+excerpt: "Well, this is not really a huge hack. Like I didn’t access the whole database or servers or killed their website or posted porn. But technically speaking I hacked it. I found a flaw which I could manipulate so that anyone I wish can win this year’s competition!"
+tags: [Hacking, computer science]
 comments: true
 ---
 
-Portland in shoreditch Vice, labore typewriter pariatur hoodie fap sartorial Austin. Pinterest literally occupy Schlitz forage. Odio ad blue bottle vinyl, 90's narwhal commodo bitters pour-over nostrud. Ugh est hashtag in, fingerstache adipisicing laboris esse Pinterest shabby chic Portland. Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney's. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.
+** Well, this is not really a huge hack. Like I didn’t access the whole database or servers or killed their website or posted porn. But technically speaking I hacked it. I found a flaw which I could manipulate so that anyone I wish can win this year’s competition! **
 
-Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.
+So here the story begins. One of my close friends in first year texted me in the morning, the same way he texted everyone else on his broadcast list, a link to his profile for this year’s Fresh Face and asked me to vote for him. I agreed.
 
-## Cupidatat 90's lo-fi authentic try-hard
+Since a few weeks, I was focusing on hacking and was reading about the hacks happened in the history. The phone hacks of 80’s, the crash of AT&T on Jan 15 1990, some accounts of Kevin Mitnick and the life story of Adrian Lamo (both of them being genius hackers). I watched “Citizenfour” yesternight, the story of Edward Snowden who revealed proofs of NSA spying on us.
 
-In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90's.
+All this resulted in an admiration for the hacker culture and a desire to be a part of it.
 
-* Sartorial hoodie
-* Labore viral forage
-* Tote bag selvage
-* DIY exercitation et id ugh tumblr church-key
+As soon as I received his message, I went to the site, voted him.
 
-Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.
+But I was shocked to see that the site had negligible amount of security implemented. No kind of verification was required to vote someone. I got suspicious. I analysed the source code. I saw that the vote button simply triggered a javascript function which was named ‘saveVote’. I thought who the heck named it so obvious that you can figure out what it does pretty easily. I didn’t have to go through its code to figure out what it does. It basically saved the vote.
 
-Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven't heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney's Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.
+I started digging deeper and deeper. Now I figured out that the session should be saved in a cookie which tells whether you have voted a particular person or not. That means if the cookie is gone, the session is gone and so is the vote. I disabled cookie storage of the browser. Voila!! When I reloaded the page, I could vote again. I made a python script to automate this process and setup a proxy server using Tor so that it seems like the votes are coming from various parts of the ‘world’.
 
-## Forage occaecat cardigan qui
+The python script automatically opens the browser, goes to the specified URL, votes the person and closes the window. This process goes on until the loop ends. And the repetition of the loop is decide by a variable I have set. It can be 5000, it can be a Lac.
 
-Fashion axe hella gastropub lo-fi kogi 90's aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole.
+Further I re-did the hack after two weeks, this time with a different approach. After getting the knowledge of how XHR (XMLHttpRequest) works, I made a Python code to send out automatic requests to the website. The site’s security was so low that it was easy for me to send these requests and get a vote. Btw, let me tell you a lame thing they did. Every request contains a user token and you can’t use the same token for getting two votes, otherwise it reports an ‘invalid transaction’ error. But if you don’t supply a user token then it won’t even check whether there is a token! That means I can make the requests w/o a user token and it won’t show an error. But as the pattern of the user token was predictable, I made a random sequence generator out of Python which looked like the one generated by the fresh face site. So voila! I am undetectable. There was a pause for a random number of seconds between each request so that it reflects the behavior of a human who is doing it manually.
 
-> Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.
+I now have a lot of control. This is not just the issue of the Pune Fresh Face site. All the states’ sites are having the same flaw. I could basically decide who gets the highest votes.
 
-Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney's next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney's sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.
-
-## Hoodie Duis
-
-Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90's pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.
-
-### Thundercats Ho!
-
-Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney's seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.
-
-Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney's selfies. Odd Future Banksy non authentic.
-
-Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.
+Now, I think I should not let my friend win. I don’t think it’s a good move. Anyways thanks buddy. Today was heavily productive because of you. But let’s not win like this. Let’s do something else with this knowledge.

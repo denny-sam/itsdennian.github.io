@@ -6,32 +6,10 @@ date: 2016-03-21
 comments: false
 ---
     
-<center><a href="http://taylantatli.github.io/Moon"><b>Moon</b></a> is a minimal, one column jekyll theme.</center>
+<center><b>Denny Sam</b></a></center>
 
-## Features
-* Minimal, you can focus on your content
-* Responsive
-* Disqus integration
-* Syntax highlighting
-* Optional post image
-* Social icons
-* Page for sharing projects
-* Optional background image
-* Simple navigation menu
-* MathJax support
+You already know what this blog might be about. A random guy, who learned some random language, describing his random experiences as a random coder. Well, I love that word. “Coder”. It sounds amazing. ‘Programmer’ is such a geeky word. Oh, you may think I am also a geek to write such a blog. Okay now there is a difference between “being a geek” and “being passionate”.
 
-## Preview
+Okay, back to the point. This page is where I want to share how I was introduced to coding, how my coding life took turns and where it is going right now. This page will prove as a guide to those who want an introduction to programming (although, I hate that word). This will also help you not make the mistakes I have made. If you have any suggestions or ideas or if you are interested in working with me on something, I will be honored to hear from you.
 
-{% capture images %}
-    https://cloud.githubusercontent.com/assets/754514/14509720/61c61058-01d6-11e6-93ab-0918515ecd56.png
-    https://cloud.githubusercontent.com/assets/754514/14509716/61ac6c8e-01d6-11e6-879f-8308883de790.png
-{% endcapture %}
-{% include gallery images=images caption="Screenshots of Moon Theme" cols=2 %}
-
-See a [live version of Moon](http://taylantatli.github.io/Moon) hosted on GitHub.
-
-## Getting Started
-
-To learn how to install and use this theme check out the [Setup Guide](http://taylantatli.me/Moon/moon-theme/) for more information.
-      
-[Install Moon](https://github.com/TaylanTatli/Moon){: .btn}
+(A secret thought I have in my mind is that, maybe I am going to become one of the best coders of this world one day, or at least my company (not yet found :p) will be the brand name one day. At that time, this blog will help a lot of people as to where Denny began and how he came so far. It will also help me remember my journey ).
